@@ -1,0 +1,40 @@
+.section {
+    overflow: hidden;
+    padding: 3rem 8rem;
+    text-align: center;
+}
+
+
+.gallery__img {
+    border-radius: .75rem;
+    height: 16rem;
+    width: 16rem;
+    object-fit: cover;
+    transform: rotate(-2deg); /* deg = degrees */
+    box-shadow: 0 1rem 2rem 1rem rgba(226, 28, 121, 0.50);
+}
+
+.gallery__img-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.gallery__img-wrapper:nth-child(even) > .gallery__img {
+    top: 1rem;
+    transform: rotate(2deg);
+}
+
+
+.gallery__img-wrapper + .gallery__img-wrapper {
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+
+
+ .video-cortado{
+    border-radius: 15px;
+    box-shadow: 0 1rem 1rem 0.25rem rgba(213, 226, 28, 0.5);
+ }
+
+

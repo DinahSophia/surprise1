@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>3 Meses com Você 💖</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffe6f0, #ffd1dc);
+      font-family: 'Segoe UI', sans-serif;
+      color: #8b0000;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.4em;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    .heart {
+      font-size: 3em;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .container {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      display: inline-block;  
+    }
+
+    h2{
+      padding: 1.5rem;
+    }
+
+    .linha-do-tempo {
+      margin-top: 30px;
+    }
+
+    .evento {
+      margin: 20px 0px;
+    }
+    .evento img {
+      width: 250px;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-left: 1rem;
+    }
+
+    .nchange{
+      max-height: 422px;
+    }
+
+    .quiz {
+      margin-top: 40px;
+    }
+    .quiz input[type="text"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .quiz button {
+      padding: 10px 20px;
+      background-color: #e75480;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .resposta {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+
+    .surpresa {
+      margin-top: 40px;
+    }
+
+
+  </style>
+  <link rel="stylesheet" href="css/surprise.css">
+</head>
+<body>
+  <div class="container">
+    <div class="heart">❤️</div>
+    <h1>3 Meses com Você</h1>
+    <p>Hoje comemoramos 3 meses de algo que tem sido maravilhoso, lindo e cheio de carinho. 💌</p>
+    <p>Sou muito grata por cada momento que esteve comigo, os bons e os dificeis, cada conversa, cada abraço e cada sorriso.</p>
+    <p>Te amo cada dia mais vidinha e mal posso esperar pelos próximos capítulos da nossa história. ✨</p>
+    <p>Com amor, <br> Sua namorada, Sophia 💕</p>
+  </div>
+
+  <section class="section">
+    <h2 class="section__title">Algumas fotinhas nossas</h2>
+    <div class="gallery">
+        <span class="gallery__img-wrapper">
+            <img class="gallery__img" src="img/Imagem do WhatsApp de 2025-04-24 à(s) 00.45.47_008ceee9.jpg" alt="" />
+        </span>
+        <span class="gallery__img-wrapper">
+            <img class="gallery__img" src="img/Imagem do WhatsApp de 2025-04-24 à(s) 00.45.47_3e6fc976.jpg" alt="" />
+        </span>
+        <span class="gallery__img-wrapper">
+            <img class="gallery__img" src="img/Imagem do WhatsApp de 2025-04-24 à(s) 00.45.47_a3f1578a.jpg" alt="" />
+        </span>
+      </section>
+
+      <h2>Alguns Interesses Carnais</h2>
+      <video class="video-cortado" src="video/fofos.mp4" controls></video>
+
+
+      <section class="linha-do-tempo">
+        <h2>Linha do Tempo do Amor</h2>
+        <div class="evento">
+          <p>📱 09/01 - Nosso primeiro dia de conversa, aqui eis o motivo e as palavras</p>
+          <img src="img/print.jpg" alt="Primeira conversa" class="nchange">
+          <img src="img/charlica.jpg">
+        </div>
+        <div class="evento">
+          <p>💋 24/01 - Nosso primeiro date e beijo</p>
+          <img src="img/date.jpg" alt="Primeiro date">
+          <img src="img/date1day.jpg" alt="Food & holding hands">
+        </div>
+        <div class="evento">
+          <p>💍 25/01 - Pedido de namoro</p>
+          <img src="img/him.jpg" alt="um jovem alto">
+          <img src="img/us.jpg" alt="us">
+        </div>
+      </section>
+    
+      <section class="quiz">
+        <h2>Quiz: Jon e Sophi's moments quiz</h2>
+        <p>1. Qual foi a hora que você me pediu em namoro?</p>
+        <input type="text" id="q1"><br>
+    
+        <p>2. Quantas rosas tinha no buquê que você me deu?</p>
+        <input type="text" id="q2"><br>
+    
+        <button onclick="verificarQuiz()">Verificar</button>
+        <div class="resposta" id="resultadoQuiz"></div>
+      </section>
+
+
+      <section class="surpresa">
+        <h2>Uma surpresinha não virtual 💌</h2>
+        <p>Você tá pronto? Clique abaixo:</p>
+        <button onclick="mostrarSurpresa(true)">Sim</button>
+        <button onclick="mostrarSurpresa(false)">Não</button>
+        <div class="resposta" id="resultadoSurpresa"></div>
+      </section>
+
+      <script>
+        function verificarQuiz() {
+          const q1 = document.getElementById("q1").value.trim();
+          const q2 = document.getElementById("q2").value.trim();
+          let resultado = "";
+    
+          if (q1 === "18:30" && q2 === "5") {
+            resultado = "✅ Você acertou tudo! Parabéns vidoca 💘";
+          } else {
+            resultado = "❌ Hmmm... Errou vidinha kkk";
+          }
+    
+          document.getElementById("resultadoQuiz").innerText = resultado;
+        }
+    
+        function mostrarSurpresa(resposta) {
+          const resultado = document.getElementById("resultadoSurpresa");
+          if (resposta) {
+            resultado.innerText = "🎁 Olha pra mim então 😍";
+          } else {
+            resultado.innerText = "😢 vou mostrar mesmo assim hehe";
+          }
+        }
+      </script>
+
+
+
+</body>
+</html>
